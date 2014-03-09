@@ -1,0 +1,1 @@
+Gentle Introduction to Backbone and Marionette - by David Sulc
