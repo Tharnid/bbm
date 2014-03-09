@@ -16,22 +16,15 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="container">
-			<div div id="main-region" class="container">
-			
 			<p>Static content here</p>
-
-			<script type="text/template" id="static-template">
-				<p> This is the text rendered by the Marionette app</p>
-			</script>
-
-		</div>
 		</div>
 
 		<!-- Javascript files go here!!! -->
 		<script src="./assets/js/vendor/jquery.js"></script>
 		<script src="./assets/js/vendor/json2.js"></script>
-		<script src="./assets/js/vendor/underscore.js"></script>
+		<script src="./assets/js/vendor/underscore-min.js"></script>
 		<script src="./assets/js/vendor/backbone.js"></script>
 		<script src="./assets/js/vendor/backbone.marionette.js"></script>
 
@@ -40,18 +33,8 @@
 
 			var ContactManager = new Marionette.Application();
 
-				ContactManager.addRegions({
-					mainRegion: "#main-region"
-				});
-
-				ContactManager.StaticView = Marionette.ItemView.extend({
-					template: "#static-template"
-				});
-
 				ContactManager.on("initialize:after", function() {
-					var staticView = new ContactManager.StaticView();
-					ContactManager.mainRegion.show(staticView);
-					// console.log("ContactManager has started!!!");
+					console.log("ContactManager has started!!!");
 				});
 
 			ContactManager.start();
